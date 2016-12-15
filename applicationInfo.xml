@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="utf-8"?> 
- <MOML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.applusform.com/xsd/moml_appInfo.xsd"> 
- 	<APPLICATIONINFO> 
-		<START url="start.xml" />  
- 		<ORIENTATION type="defaultPortrait" /> 
- 	</APPLICATIONINFO> 
- </MOML> 
-  
+<?xml version="1.0" encoding="utf-8"?>
+
+<MOML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.opengis.net/wfs http://schemas.opengis.net/wfs/1.1.0/wfs.xsd http://www.opengis.net/gml http://schemas.opengis.net/gml/3.1.1/base/feature.xsd">
+	<APPLICATIONINFO>
+		<START url="start.xml" /> 
+		<ORIENTATION type="defaultPortrait" />
+	</APPLICATIONINFO>
+</MOML>
