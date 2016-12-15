@@ -1,0 +1,73 @@
+<!DOCTYPE html> 
+2 <html> 
+3 <head> 
+4 <meta name="viewport" content="initial-scale=1.0, user-scalable=no"> 
+5 <style> 
+6 html,body,#map-canvas { 
+7 	height: 100%; 
+8 	margin: 0px; 
+9 	padding: 0px 
+10 } 
+11 </style> 
+12 <script 
+13 	src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&language=ko"></script> 
+14 <script> 
+15  
+16 	function initialize() { 
+17  
+18 		var pos = new google.maps.LatLng($LATITUDE$, $LONGITUDE$); 
+19 		var mapOptions = { 
+20 			zoom : 15, 
+21 			center : pos, 
+22 			panControl : false, 
+23 			zoomControl : true, 
+24 			zoomControlOptions: { 
+25 				position : google.maps.ControlPosition.RIGHT_BOTTOM 
+26 			}, 
+27 			mapTypeControl : true, 
+28 			scaleControl : true, 
+29 			streetViewControl : false, 
+30 			overviewMapControl : false, 
+31 			mapTypeId : google.maps.MapTypeId.ROADMAP 
+32  
+33 		} 
+34 		var map = new google.maps.Map(document.getElementById('map-canvas'), 
+35 				mapOptions); 
+36  
+37 		var marker = new google.maps.Marker({ 
+38 			icon: new google.maps.MarkerImage('http://maps.google.com/mapfiles/ms/micons/hospitals.png'), 
+39 			position : pos, 
+40 			title : "target", 
+41 			map : map 
+42 		}); 
+43  
+44 		var myPos = new google.maps.LatLng($MYLATITUDE$, $MYLONGITUDE$); 
+45  
+46 		var myPosMarker = new google.maps.Marker({ 
+47 			icon: new google.maps.MarkerImage('http://maps.google.com/mapfiles/ms/micons/man.png'), 
+48 			position : myPos, 
+49 			title : "here", 
+50 			map : map 
+51 		}); 
+52  
+53 		var infowindow = new google.maps.InfoWindow({ 
+54 			content : '<span><b>$ADDRESS$</b></span>' 
+55 		}); 
+56  
+57 		google.maps.event.addListener(marker, 'click', function() { 
+58 			infowindow.open(map, marker); 
+59 		}); 
+60  
+61 		window.setTimeout(function() { 
+62 		infowindow.open(map, marker); 
+63 		}, 2000); 
+64 		 
+65 	} 
+66  
+67 	google.maps.event.addDomListener(window, 'load', initialize); 
+68 </script> 
+69 </head> 
+70 <body> 
+71 	<div id="map-canvas"></div> 
+72 </body> 
+73 </html> 
