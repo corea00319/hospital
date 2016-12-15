@@ -1,15 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?> 
-2 <!-- 
-3 	Created by ApplusForm.com on 2015.03.18 
-4  
-5 	Permission is granted to copy, distribute, modify under the terms of ApplusForm License. 
-6  
-7 	Copyright (C) 2013 ApplusForm.com All rights reserved. 
-8 --> 
-9 <MOML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.applusform.com/xsd/moml_appInfo.xsd"> 
-10 	<APPLICATIONINFO> 
-11 		<START url="start.xml" />  
-12 		<ORIENTATION type="defaultPortrait" /> 
-13 	</APPLICATIONINFO> 
-14 </MOML> 
-15  
+
+ <MOML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.applusform.com/xsd/moml_appInfo.xsd"> 
+ 	<APPLICATIONINFO> 
+		<START url="start.xml" />  
+ 		<ORIENTATION type="defaultPortrait" /> 
+ 	</APPLICATIONINFO> 
+ </MOML> 
+  
