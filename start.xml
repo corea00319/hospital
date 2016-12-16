@@ -57,7 +57,7 @@
  		<CMD cmd="url = 'http://openapi.e-gen.or.kr/openapi/service/rest/HsptlAsembySearchService/getHsptlMdcncLcinfoInqire?ServiceKey=' + userVariable.serviceKey"/> 
  		<CMD cmd="url = url + '&amp;WGS84_LAT=' + latitude.text"/> 
  		<CMD cmd="url = url + '&amp;WGS84_LON=' + longitude.text"/> 
-		<CMD cmd="url = url + '&amp;pageNo=1&amp;numOfRows=100'"/> 
+		<CMD cmd="url = url + '&amp;pageNo=1&amp;numOfRows=10'"/> 
 		<CMD cmd="xml = file.read(url)" /> 
  		<RETURN condition="not string.equals(xpath.evaluateEx(xml, '//resultCode/text()'), '00')" cmd="device.systemPopup(xpath.evaluateEx(xml, '//resultMsg/text()'))"/> 
  		<RETURN condition="xpath.evaluateEx(xml, '//totalCount/text()') == 0" cmd="device.systemPopup('검색 결과가 없습니다.')"/> 
